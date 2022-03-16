@@ -26,3 +26,8 @@ Application to search LOTR Quotes by the characters name.
 The One API <br />
 Node.js with Express <br />
 React.js (create-react-app) with Material UI Kit <br />
+
+## Screenshots
+
+![Typing State](./assets/typing.png)
+![Results](./assets/results.png)
