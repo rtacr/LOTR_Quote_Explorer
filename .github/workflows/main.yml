@@ -29,12 +29,14 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       
-      - name: Build the stack
-        run: docker-compose up -d
+      # - name: Build the stack
+      #   run: docker-compose up -d
       
       - name: Go to backend dir
         run: cd ./src/server
         env:
           API_KEY: ${{secrets.API_KEY}}
+      - name: build with docker
+        run: docker build . --tag server-image
       - name: Run tests
         run: npm test        
