@@ -1,0 +1,19 @@
+version: '1'
+
+services:
+  backend:
+    env_file:
+        "./src/server/.env"
+    build:
+      context: ./src/server
+      dockerfile: ./Dockerfile
+    image: "rtacr/lotrqe-server"
+    ports:
+      - "8080:8080"
+  frontend:
+    build:
+      context: ./src/web
+      dockerfile: ./Dockerfile
+    image: "rtacr/lotrqe-web"
+    ports:
+      - "3000:3000"
